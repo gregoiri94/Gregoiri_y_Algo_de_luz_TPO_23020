@@ -104,8 +104,6 @@ header {
 
 .box-2 p {
     padding: 10px;
-    font-weight: 100em;
-
 }
 
 .box-2 a {
@@ -458,6 +456,8 @@ header {
 .fgr-incorrecto .finput {
 	border: 3px solid #8b0000;
 }
+
+/* footer */
 
 .box-12 {
     display: flex;
