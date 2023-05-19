@@ -52,7 +52,7 @@ header {
     text-decoration: none;
     font-size: 2em;
     color: goldenrod;
-    font-family: 'Splash', cursive;
+    font-family: 'Splash', cursive !important;
     text-align: center;
 
 }
@@ -279,7 +279,7 @@ header {
     height: 400px;
 
 }
-
+/* seccion galeria */
 .fotos-clientes {
     display: flex;
     flex-flow: row wrap;
@@ -310,7 +310,7 @@ header {
     object-position: center;
     padding: 1rem;
 }
-
+/* seccion reservas */
 .form { 
     display:flex;
     flex-flow: row wrap;
@@ -320,42 +320,145 @@ header {
 
 }
 
-.form div { 
-    display: flex;
-    flex-flow:row wrap;
-    justify-content: space-around;
-    padding: 7rem 3rem 1rem;
-    width: 80%;
-}
 .form h3 { 
     text-align: center;
+    padding: 1rem;
     color: goldenrod;
     font-family: 'Martel', serif;
     font-size: 2em;
-
-}
-.form div label { 
-    color: goldenrod;
-}
-.form div input { 
-    border: none;
-    border-bottom: 1px solid goldenrod;
-    background-color: #110903;
-    padding: 0.5em;
-    color: goldenrod;
 }
 
-.form div button { 
-    width: fit-content;
-    margin: 2em;
-    padding: 0.5em;
-    background-color: #110903;
-    border: 1px solid goldenrod;
-    color: goldenrod;
-    border-radius: 10px;
-    float: right;
+.formulario {
+	display: flex;
+    flex-flow: column wrap;
+	justify-content: space-around;
+    width: 70%;
+    padding: 1rem 3rem 3rem;
     
 }
+.formulario label {
+    color: goldenrod;
+}
+
+.flabel {
+
+	display: block;
+	padding: 0.5em;
+	
+    
+}
+
+.fgr-input {
+	position: relative;
+}
+
+.finput {
+	width: 100%;
+	background: #110903;
+	border: 1px solid goldenrod;
+	line-height: 2rem;
+	padding: 0 15px;
+    color: #daa520;
+}
+
+.finput:focus {
+	border: 2px solid #daa520;
+	outline: none;
+}
+
+.finput-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+    color:#daa520;
+}
+
+.finput-error-activo {
+	display: block;
+}
+
+.fvalidacion-estado {
+	position: absolute;
+	right: 32px;
+	bottom: 10px;
+	z-index: 100;
+	opacity: 0;
+} 
+.fmensaje,
+.fgrupo-btn-enviar {
+	display: flex;
+    justify-content: center;
+}
+
+.fmensaje {
+	color: #8b0000;
+	display: none;
+    text-align: center;
+}
+
+.fmensaje-activo {
+	display: block;
+}
+
+.fmensaje p {
+	margin: 0;
+}
+
+.fgr-btn-enviar {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.fbtn {
+    margin: 2em;
+	width: fit-content;
+	background-color: #110903;
+	color: #daa520;
+	border: 1px solid #daa520;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.fbtn:hover {
+	background-color: #daa520;
+    color: #110903;
+    font-weight: bold;
+}
+
+.fmensaje-exito {
+	font-size: 14px;
+	color: #17741e;
+	display: none;
+    text-align: center;
+}
+
+.fmensaje-exito-activo {
+	display: block;
+}
+
+/* para Validacion */
+.fgr-correcto .fvalidacion-estado {
+	color: #17741e;
+	opacity: 1;
+}
+
+.fgr-incorrecto .flabel {
+	color: #8b0000;
+}
+
+.fgr-incorrecto .fvalidacion-estado {
+	color: #8b0000;
+	opacity: 1;
+}
+
+.fgr-incorrecto .finput {
+	border: 3px solid #8b0000;
+}
+
 .box-12 {
     display: flex;
     justify-content: space-around;
@@ -403,12 +506,17 @@ header {
         padding: 2rem 4rem;
     }
     .form { 
-        padding: 11rem 7rem 1rem;
+        padding: 11rem 3rem 1rem;
     }
-    
+    .fbtn { 
+        width: 100%;
+    }
 
 }
 @media screen and ( max-width: 600px){
+    body{ 
+        font-size: 14px;
+    }
     .box-1 { 
         padding: 1rem 0;
         align-items: center;
@@ -435,11 +543,21 @@ header {
         padding: 7rem 2rem;
     }
     .form { 
-        padding: 9rem 5rem 1rem;
+        padding: 9rem 1rem 1rem;
     }
+
+    
     .box-12 nav{ 
         padding: 3rem;
         align-items: center;
         align-content:center;
     }
+    
+}
+@media screen and (max-width: 440px){
+    body {
+        width: 100%;
+        font-size: 14px;
+    }
+
 }
