@@ -273,8 +273,8 @@ header {
     opacity: 0.8;
     background-color: #110903;
     background-blend-mode: darken;
-    width: 500px;
-    height: 400px;
+    width: 31.25rem;
+    height: 25rem;;
 
 }
 /* seccion galeria */
@@ -514,7 +514,7 @@ header {
 
 }
 @media screen and ( max-width: 600px){
-    body{ 
+    *{ 
         font-size: 14px;
     }
     .box-1 { 
@@ -555,9 +555,70 @@ header {
     
 }
 @media screen and (max-width: 440px){
-    body {
+    * {
         width: 100%;
         font-size: 14px;
     }
-
+    .box-2 { 
+        padding: 5rem 0;
+    }
+    .box-2 div {
+        padding: 5rem 1rem;
+    }
+    .tarjetas {
+    background-color: #110903;
+    text-align: center;
+    font-family: 'Martel', serif;
+    color: goldenrod;
+    padding:7rem 0;
+    display: flex;
+    flex-flow: column wrap;
+    }
+    .card { 
+        width: 16rem;
+    }
+    .card h3 {
+        padding: 3px;
+    }
+    .box7 {
+        padding: 3rem 0;
+    }
+    .card1 {
+        width: 80rem;
+    }
+    .sucursales {
+        padding: 9rem 2rem;
+    }
+    .sucursales div iframe{ 
+        width: 15rem;
+        height: 15rem;
+    }
+    .sucursales p { 
+        padding: 1rem;
+    }
+    .fotos-clientes {
+        padding: 7rem 0;
+    }
+    .galeria1 {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        width: 100%;
+        padding: 4rem 0;
+    }
+    .fotos-clientes img { 
+        width: 90%;
+    }
+    .formulario {
+        width: 90%;
+        padding: 1rem 1rem 3rem;
+    }
+    .box-12 { 
+        display: flex;
+        flex-flow: row wrap;    
+    }
+    .box-12 nav {
+        padding: 0;
+    }
+    
 }
